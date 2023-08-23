@@ -26,16 +26,16 @@ describe('Newsletter Subscribe Form', () => {
   })
 
   context('Courses section', () => {
-    it.only('Course: Testing Your First Next.js Application', () => {
+    it('Course: Testing Your First Next.js Application', () => {
       cy.getByData('course-0').find('a').eq(3).click();
       cy.location('pathname').should('eq', '/testing-your-first-application');
     })
 
-    it.only('Course: Testing Fundations', () => {
+    it('Course: Testing Fundations', () => {
       cy.getByData('course-1').find('a').eq(3).click();
       cy.location('pathname').should('eq', '/testing-foundations');
     })
-    it.only('Course: Cypress Fundamentals', () => {
+    it('Course: Cypress Fundamentals', () => {
       cy.getByData('course-2').find('a').contains('Get started').click();
       cy.location('pathname').should('eq', '/cypress-fundamentals');
     })
